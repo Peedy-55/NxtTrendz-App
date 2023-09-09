@@ -1,39 +1,15 @@
-In this project, let's build a **Nxt Trendz - Cart Features** by applying the concepts we have learned till now.
+In this project, I built a **Nxt Trendz - Cart Features** by applying the concepts I have learned till now.
 
-### Refer to the video below:
-
-<br/>
-<div style="text-align: center;">
-  <video style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12);outline:none;" loop="true" autoplay="autoplay" controls="controls" muted>
-    <source src="https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-output.mp4" type="video/mp4">
-  </video>
-</div>
-<br/>
-
-### Design Files
-
-<details>
-<summary>Click to view</summary>
-
-- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-sm-output-v0.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-lg-output.png)
-
-</details>
-
-### Set Up Instructions
-
-<details>
-<summary>Click to view</summary>
 
 - Download dependencies by running `npm install`
 - Start up the app using `npm start`
-</details>
+
 
 ### Completion Instructions
 
-<details>
-<summary>Functionality to be added</summary>
-<br/>
+
+Functionality to be added
+
 
 The app must have the following functionalities
 
@@ -74,9 +50,7 @@ The app must have the following functionalities
   - `incrementCartItemQuantity` - this method increases the quantity of a product in the `cartList`
   - `decrementCartItemQuantity` - this method decreases the quantity of a product in the `cartList`
 
-</details>
 
-<details>
 <summary>Components Structure</summary>
 
 <br/>
@@ -178,6 +152,3 @@ Use these files to complete the implementation:
 > ### _Things to Keep in Mind_
 >
 > - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
