@@ -27,7 +27,7 @@ class App extends Component {
     this.setState({cartList: []})
   }
 
-  //   TODO: Add your code for remove all cart items, increment cart item quantity, decrement cart item quantity, remove cart item
+  
 
   incrementCartItemQuantity = id => {
     this.setState(prevState => ({
@@ -79,7 +79,7 @@ class App extends Component {
       this.setState(prevState => ({cartList: [...prevState.cartList, product]}))
     }
 
-    //   TODO: Update the code here to implement addCartItem
+    
   }
 
   render() {
