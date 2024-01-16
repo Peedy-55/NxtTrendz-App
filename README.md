@@ -1,69 +1,60 @@
-In this project, I built a **Nxt Trendz - Cart Features** by applying the concepts I have learned till now.
 
+---
 
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
+# Nxt Trendz - Cart Features Project
 
+## Overview
 
-### Completion Instructions
+In this project, I implemented **Nxt Trendz - Cart Features**, applying the concepts learned so far.
 
+## Set Up Instructions
 
-Functionality to be added
+- Download dependencies by running `npm install`.
+- Start up the app using `npm start`.
 
+## Completion Instructions
 
-The app must have the following functionalities
+### Functionality to be Added
 
-- When an unauthenticated user tries to access the **Cart** Route, then the page should be navigated to **Login** Route
+The app should have the following functionalities:
 
-- Following are the features to be implemented
+#### Unauthenticated User Access
 
-  - Feature 1
+- When an unauthenticated user attempts to access the **Cart** Route, redirect to the **Login** Route.
 
-    - When an authenticated user tries to add the same product multiple times
-      - The quantity of the product should be updated accordingly, and the count of the cart items in the header should be remained same
+#### Features to be Implemented
 
-  - Feature 2
+1. **Feature 1: Update Product Quantity**
+   - Authenticated users adding the same product multiple times should update the quantity accordingly. The count of cart items in the header should remain the same.
 
-    - The total amount and number of items in the cart should be displayed in the **Cart** Route
+2. **Feature 2: Display Total Amount and Items**
+   - Display the total amount and number of items in the cart on the **Cart** Route.
 
-  - Feature 3
+3. **Feature 3: Cart Item Interaction**
+   - Increment and decrement product quantity in each cart item.
+   - When the quantity is one and the minus icon is clicked, remove the respective product from the cart.
+   - Update product price and Cart Summary based on quantity changes.
 
-    - In each cart item in the cart
-      - When the plus icon is clicked, then the quantity of the product should be incremented by one
-      - When the minus icon is clicked, then the quantity of the product should be decremented by one
-      - When the quantity of the product is one and the minus icon is clicked, then the respective product should be removed from the cart
-      - Based on the quantity of the product, the product price and the Cart Summary, i.e the total cost should be updated accordingly
+4. **Feature 4: Remove Cart Item**
+   - Authenticated users should be able to remove a cart item by clicking the remove button.
 
-  - Feature 4
+5. **Feature 5: Remove All Cart Items**
+   - Authenticated users should be able to remove all cart items. Display the [Empty Cart View](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-empty-cart-view.png).
 
-    - When an authenticated user clicks on the remove button, cart item should be removed from the cart list
+#### `CartContext` Properties
 
-  - Feature 5
+- `cartList`: Stores cart items.
+- `removeAllCartItems`: Removes all cart items in the `cartList`.
+- `addCartItem`: Adds a cart item to the `cartList`.
+- `removeCartItem`: Removes a cart item from the `cartList`.
+- `incrementCartItemQuantity`: Increases the quantity of a product in the `cartList`.
+- `decrementCartItemQuantity`: Decreases the quantity of a product in the `cartList`.
 
-    - When an authenticated user clicks on the **Remove All** button, all the cart items should be removed from the cart and [Empty Cart View](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-empty-cart-view.png) should be displayed
+## Components Structure
 
-- The `CartContext` has an object as a value with the following properties
-  - `cartList` - this key stores the cart items
-  - `removeAllCartItems` - this method is used to remove all the cart items in the `cartList`
-  - `addCartItem` - this method adds the cart item to the `cartList`
-  - `removeCartItem` - this method removes the cart item from the `cartList`
-  - `incrementCartItemQuantity` - this method increases the quantity of a product in the `cartList`
-  - `decrementCartItemQuantity` - this method decreases the quantity of a product in the `cartList`
+![Component Structure](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-component-structure-breakdown.png)
 
-
-<summary>Components Structure</summary>
-
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-component-structure-breakdown.png" alt="component structure breakdown" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
-
-</details>
-
-<details>
-<summary>Implementation Files</summary>
-<br/>
+## Implementation Files
 
 Use these files to complete the implementation:
 
@@ -74,81 +65,53 @@ Use these files to complete the implementation:
 - `src/components/CartItem/index.css`
 - `src/components/CartSummary/index.js`
 - `src/components/CartSummary/index.css`
-</details>
 
-### Quick Tips
+## Quick Tips
 
-<details>
-<summary>Click to view</summary>
-<br>
+- Use `line-height` CSS property to set the height of a line box.
 
-- The `line-height` CSS property sets the height of a line box. It's commonly used to set the distance between lines of text
+    ```css
+    line-height: 1.5;
+    ```
 
-  ```
-  line-height: 1.5;
-  ```
+- Use the array method `find()` to return the first item's value that satisfies the provided testing function.
 
-    <br/>
-    <img src="https://assets.ccbp.in/frontend/react-js/line-height-img.png" alt="line height" style="width:90%; max-width: 600px;"/>
+    ```javascript
+    arr.find(Testing Function);
+    ```
 
-- The array method `find()` returns the first item's value that satisfies the provided testing function. If no item is found, it returns `undefined`
+## Important Note
 
-  **Syntax**: `arr.find(Testing Function)`
+- Utilize `BsPlusSquare` and `BsDashSquare` icons from `react-icons` for plus and minus buttons.
+- Use `AiFillCloseCircle` icon for the remove button.
+- Ensure the HTML button elements in `CartItem` have `data-testid` attributes for plus, minus, and remove actions.
+- Set the alt attribute of the product image in **Cart Item** Route as the `title` of the product.
 
-</details>
+### Prime User Credentials
 
-### Important Note
+```plaintext
+username: rahul
+password: rahul@2021
+```
 
-<details>
-<summary>Click to view</summary>
+### Non-Prime User Credentials
 
-<br/>
+```plaintext
+username: raja
+password: raja@2021
+```
 
-**The following instructions are required for the tests to pass**
+## Resources
 
-- `BsPlusSquare`, `BsDashSquare` icons from `react-icons` should be used for **plus** and **minus** buttons in cart item
-- The Cart Item should consist of two HTML button elements with data-testid attribute values as **plus** and **minus** respectively
-- `AiFillCloseCircle` icon from react-icons should be used for **remove** button in cartItem
-- The Cart Item should consist of an HTML button element with data-testid attribute values as **remove**
-- The product image in **Cart Item** Route should have the alt as `title` of the product
+### Colors
 
-- Prime User credentials
+- Hex: #0b69ff
+- Hex: #171f46
+- Hex: #616e7c
+- Hex: #ffffff
 
-  ```text
-   username: rahul
-   password: rahul@2021
-  ```
-
-- Non-Prime User credentials
-
-  ```text
-   username: raja
-   password: raja@2021
-  ```
-
-</details>
-
-### Resources
-
-<details>
-<summary>Colors</summary>
-
-<br/>
-
-<div style="background-color: #0b69ff; width: 150px; padding: 10px; color: white">Hex: #0b69ff</div>
-<div style="background-color: #171f46; width: 150px; padding: 10px; color: white">Hex: #171f46</div>
-<div style="background-color: #616e7c; width: 150px; padding: 10px; color: white">Hex: #616e7c</div>
-<div style="background-color: #ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
-
-</details>
-
-<details>
-<summary>Font-families</summary>
+### Font Families
 
 - Roboto
 
-</details>
-
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
+---
